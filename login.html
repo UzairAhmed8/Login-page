@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            color: #171717;
+            text-shadow: 5px 5px 10px red;
+            font-size: 20px;
+            background: linear-gradient(90deg , rgb(248, 205, 125) , wheat);            
+        }
+        .container-1{
+            display: flex;
+            justify-content: center;
+        }        
+        input{
+            padding: 10px 10px;
+            font-size: 15px;
+            font-weight: bolder;
+            font-family: cursive;
+            border: 1px solid transparent;
+        }
+        input:focus{
+            background-color: #575757;
+            border: 1px solid transparent;
+        }
+        p{
+            text-align: center;
+        }
+        button{
+            background-color: #171717;
+            color: white;
+            font-weight: bold;
+            padding: 10px 10px;
+            border: 1px solid transparent;
+            font-size: 17px;
+        }
+        button:hover{
+            background-color: white;
+            color: #171717;
+            transition: all 0.3s ease-in-out;
+        }
+        .butt{
+            display: flex;
+            justify-content: center;
+        }
+        .login{
+            font-size: 34px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="login">Login Page</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>    
+    <div class="main-obj-1">
+        <div class="container-1">
+            <div class="subcontainer-1"><label for="">
+                <p>Email</p>
+                <input type="text" id="Email" placeholder="Enter Email" required>
+            </label>
+            <br>
+            <label for=""><p>Password</p>
+                <input type="text" id="Password" placeholder="Enter Password" required>
+            </label>
+            <br>
+            <br>
+            <span class="butt">
+                <button onclick="login()">Login</button>
+            </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function login(){
+            let  email = document.getElementById("Email").value;
+            let  password = document.getElementById("Password").value;
+    
+            localStorage.getItem (email , "Email")
+            localStorage.getItem (password , "Password")
+            alert("You Have Loged in Successfully!")
+
+            let userConfirmed = confirm("You signed in successfully! Click OK to proceed to the Home page.");
+            if (userConfirmed) {
+                window.location.href = "home.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
